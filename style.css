@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 顶部展示区 */
+.header {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.6s ease;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tarot-image {
+    margin-bottom: 20px;
+}
+
+.card-placeholder {
+    font-size: 80px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.header-text h1 {
+    font-size: 32px;
+    color: #764ba2;
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* 价格区 */
+.pricing-section {
+    margin-bottom: 30px;
+}
+
+.price-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.original-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.discount-price {
+    font-size: 48px;
+    color: #764ba2;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.discount-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* 服务列表 */
+.services-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.services-section h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.service-item:hover {
+    border-color: #667eea;
+    background-color: #f8f9ff;
+}
+
+.service-item input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkmark {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+}
+
+.service-item input[type="checkbox"]:checked + .checkmark {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: #764ba2;
+}
+
+.service-name {
+    flex: 1;
+    color: #333;
+    font-weight: 500;
+}
+
+.service-price {
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* 总价显示 */
+.total-price-section {
+    margin-bottom: 30px;
+}
+
+.total-price-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.total-amount {
+    color: #764ba2;
+    font-size: 28px;
+}
+
+/* 预约按钮 */
+.booking-section {
+    margin-bottom: 30px;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.book-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
+}
+
+.book-btn:active {
+    transform: translateY(-1px);
+}
+
+/* 优惠码区 */
+.coupon-section {
+    margin-bottom: 30px;
+}
+
+.coupon-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.coupon-card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.coupon-code {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+}
+
+.copy-btn {
+    background: white;
+    border: 2px solid #667eea;
+    color: #667eea;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: #667eea;
+    color: white;
+}
+
+/* 社交媒体 */
+.social-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.social-section h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon.facebook { color: #3b5998; }
+.social-icon.tiktok { color: #000; }
+.social-icon.instagram { color: #e4405f; }
+.social-icon.twitter { color: #000; }
+.social-icon.youtube { color: #ff0000; }
+
+/* 页脚 */
+.footer {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.newsletter-form button {
+    padding: 12px 20px;
+    background: white;
+    color: #764ba2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    transform: scale(1.05);
+}
+
+.footer-links {
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}
+
+/* 动画 */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .header { padding: 25px 15px; }
+    .tarot-image { font-size: 60px; }
+    .header-text h1 { font-size: 24px; }
+    .discount-price { font-size: 36px; }
+    .total-price-card { font-size: 16px; }
+    .total-amount { font-size: 22px; }
+}

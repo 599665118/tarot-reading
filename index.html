@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>塔罗牌阅读服务</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部展示区 -->
+        <header class="header">
+            <div class="header-content">
+                <div class="tarot-image">
+                    <div class="card-placeholder">🔮</div>
+                </div>
+                <div class="header-text">
+                    <h1>塔罗牌阅读</h1>
+                    <p>探索你的命运，获得宇宙的指引</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 价格区 -->
+        <section class="pricing-section">
+            <div class="price-card">
+                <div class="original-price">原价：$99</div>
+                <div class="discount-price">$74.25</div>
+                <div class="discount-badge">25% 折扣</div>
+            </div>
+        </section>
+
+        <!-- 服务列表 -->
+        <section class="services-section">
+            <h2>选择你的服务</h2>
+            <div class="services-list">
+                <label class="service-item">
+                    <input type="checkbox" value="50" data-name="三牌阅读">
+                    <span class="checkmark"></span>
+                    <span class="service-name">三牌阅读</span>
+                    <span class="service-price">+$50</span>
+                </label>
+                <label class="service-item">
+                    <input type="checkbox" value="75" data-name="凯尔特十字">
+                    <span class="checkmark"></span>
+                    <span class="service-name">凯尔特十字</span>
+                    <span class="service-price">+$75</span>
+                </label>
+                <label class="service-item">
+                    <input type="checkbox" value="60" data-name="爱情阅读">
+                    <span class="checkmark"></span>
+                    <span class="service-name">爱情阅读</span>
+                    <span class="service-price">+$60</span>
+                </label>
+                <label class="service-item">
+                    <input type="checkbox" value="80" data-name="事业指导">
+                    <span class="checkmark"></span>
+                    <span class="service-name">事业指导</span>
+                    <span class="service-price">+$80</span>
+                </label>
+                <label class="service-item">
+                    <input type="checkbox" value="55" data-name="健康咨询">
+                    <span class="checkmark"></span>
+                    <span class="service-name">健康咨询</span>
+                    <span class="service-price">+$55</span>
+                </label>
+                <label class="service-item">
+                    <input type="checkbox" value="90" data-name="年度运势">
+                    <span class="checkmark"></span>
+                    <span class="service-name">年度运势</span>
+                    <span class="service-price">+$90</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- 总价显示 -->
+        <section class="total-price-section">
+            <div class="total-price-card">
+                <span>总价：</span>
+                <span class="total-amount">$74.25</span>
+            </div>
+        </section>
+
+        <!-- 预约按钮 -->
+        <section class="booking-section">
+            <button class="book-btn" id="bookBtn">预约现在</button>
+        </section>
+
+        <!-- 优惠码区 -->
+        <section class="coupon-section">
+            <div class="coupon-card">
+                <p>使用优惠码获得 <strong>25% 折扣</strong></p>
+                <div class="coupon-code">samira25</div>
+                <button class="copy-btn" id="copyBtn">复制优惠码</button>
+            </div>
+        </section>
+
+        <!-- 社交媒体 -->
+        <section class="social-section">
+            <h3>关注我们</h3>
+            <div class="social-links">
+                <a href="#" class="social-icon facebook">f</a>
+                <a href="#" class="social-icon tiktok">♪</a>
+                <a href="#" class="social-icon instagram">📷</a>
+                <a href="#" class="social-icon twitter">𝕏</a>
+                <a href="#" class="social-icon youtube">▶</a>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <div class="footer-content">
+                <form class="newsletter-form">
+                    <input type="email" placeholder="输入你的邮箱" required>
+                    <button type="submit">订阅</button>
+                </form>
+                <p class="footer-links">
+                    <a href="#">取消订阅</a> | 
+                    <a href="#">技术支持</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
