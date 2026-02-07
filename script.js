@@ -28,10 +28,28 @@ copyBtn.addEventListener('click', () => {
     });
 });
 
-// 预约按钮点击 - 直接跳转到Google表单
+// 获取模态框元素
+const modal = document.getElementById('formModal');
+const closeModalBtn = document.getElementById('closeModal');
+
+// 预约按钮点击 - 打开模态框
 bookBtn.addEventListener('click', () => {
-    // 直接在新标签页打开Google表单
-    window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdmWE63Ac7AoLdGsk3FJQJZtJgqsXKZlWgpKM67_us-B3sGYw/viewform';
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // 防止背景滚动
+});
+
+// 关闭按钮
+closeModalBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
+
+// 点击模态框外部关闭
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
 });
 
 // 表单提交
