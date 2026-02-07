@@ -28,20 +28,10 @@ copyBtn.addEventListener('click', () => {
     });
 });
 
-// 预约按钮点击
+// 预约按钮点击 - 直接跳转到Google表单
 bookBtn.addEventListener('click', () => {
-    const selectedServices = Array.from(checkboxes)
-        .filter(cb => cb.checked)
-        .map(cb => cb.dataset.name)
-        .join(', ') || '基础服务';
-    
-    const totalPrice = totalAmountEl.textContent;
-    
-    // 跳转到Google表单
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLSdmWE63Ac7AoLdGsk3FJQJZtJgqsXKZlWgpKM67_us-B3sGYw/viewform', '_blank');
-    
-    // 可选：显示提示信息
-    alert(`即将打开预约表单\n您选择的服务：${selectedServices}\n总价：${totalPrice}\n\n请在表单中填写您的联系信息！`);
+    // 直接在新标签页打开Google表单
+    window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdmWE63Ac7AoLdGsk3FJQJZtJgqsXKZlWgpKM67_us-B3sGYw/viewform';
 });
 
 // 表单提交
