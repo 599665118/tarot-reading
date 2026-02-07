@@ -36,7 +36,12 @@ bookBtn.addEventListener('click', () => {
         .join(', ') || '基础服务';
     
     const totalPrice = totalAmountEl.textContent;
-    alert(`预约成功！\n服务：${selectedServices}\n总价：${totalPrice}`);
+    
+    // 跳转到Google表单
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSdmWE63Ac7AoLdGsk3FJQJZtJgqsXKZlWgpKM67_us-B3sGYw/viewform', '_blank');
+    
+    // 可选：显示提示信息
+    alert(`即将打开预约表单\n您选择的服务：${selectedServices}\n总价：${totalPrice}\n\n请在表单中填写您的联系信息！`);
 });
 
 // 表单提交
